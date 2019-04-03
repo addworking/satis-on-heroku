@@ -32,7 +32,7 @@ if ! [ -z "$SATIS_AUTH_USERNAME" ]; then
 fi
 
 # Perform an initial build when the instance starts.
-./vendor/bin/satis build --no-interaction --skip-errors
+./vendor/bin/satis build --no-interaction --skip-errors &
 
 if [ "$SATIS_GITHUB_MANAGE_WEBHOOKS" == "1" ]; then
     # Create and update webhooks in the background.
